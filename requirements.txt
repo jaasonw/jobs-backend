@@ -1,0 +1,5 @@
+fastapi==0.104.0
+uvicorn==0.23.2
+requests-cache==1.1.0
+shillelagh==1.2.8
+shillelagh[gsheetsapi]==1.2.8
