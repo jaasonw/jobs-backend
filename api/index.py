@@ -25,7 +25,7 @@ def get_jobs():
     LEFT JOIN blacklist
     ON UPPER(blacklist.Company) LIKE UPPER(jobs.Company)
     WHERE blacklist.Company IS NULL
-        AND "Years of Experience" < 3
+        AND "Years of Experience" <= 3
         AND TS_SCI != 'True'
         AND Mid != 'True'
         AND "Senior" != 'True'
