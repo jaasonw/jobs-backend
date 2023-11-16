@@ -89,6 +89,10 @@ def get_internships():
     ON UPPER(blacklist.Company) LIKE UPPER(jobs.Company)
     WHERE blacklist.Company IS NULL
         AND Intern = 'True'
+        AND "Years of Experience" <= 3
+        AND TS_SCI != 'True'
+        AND Mid != 'True'
+        AND "Senior" != 'True'
     """
     rows = [row for row in cursor.execute(SQL)]
     field_names = [i[0] for i in cursor.description]
